@@ -6,6 +6,5 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
-vim.g.undotree_DiffCommand = "FC"
-
-
+vim.opt.scrolloff = 999
+vim.opt.wrap = false
