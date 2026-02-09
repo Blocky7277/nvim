@@ -9,7 +9,7 @@ return {
             [[  /    / _// /_/ / |/ // // /|_/ /  ]],
             [[ /_/|_/___/\____/|___/___/_/  /_/   ]],
         }
-        dashboard.section.header.opts.hl = "error"
+        dashboard.section.header.opts.hl = "AlphaHeader"
         local buttons = {
             dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
             dashboard.button("f", "󰉋  File Explorer", ":Ex<CR>"),
