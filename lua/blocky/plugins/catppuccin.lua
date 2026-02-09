@@ -8,7 +8,7 @@ return {
             highlight_overrides = {
                 mocha = function(mocha)
                     return {
-                        LineNr = { fg = mocha.mauve },
+                        LineNr = { fg = mocha.red },
                     }
                 end,
             }
