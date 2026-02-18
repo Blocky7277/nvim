@@ -15,8 +15,8 @@ return {
         "python",
         "sh",
         "toml",
-        "ts",
         "typescript",
+        "c",
     },
     config = function()
         local mason_lspconfig = require("mason-lspconfig")
@@ -74,10 +74,24 @@ return {
             },
         })
 
+        require("lspconfig").ccls.setup({
+            capabilities = capabilities,
+            init_options = {
+                cache = {
+                    directory = ".ccls-cache";
+                };
+            }
+            -- Add any specific system paths here if needed
+        })
+
         vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup("UserLspConfig", {}),
             callback = function(event)
-                local opts = { buffer = event.buf, silent = true, noremap = true }
+                local opts = { 
+                    buffer = event.buf,
+                    silent = true,
+                    noremap = true
+                }
                 -- stylua: ignore start
                 local keymaps = {
                     { "n", "gC",         vim.lsp.buf.outgoing_calls,  "Outgoing Calls" },
