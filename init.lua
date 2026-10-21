@@ -1,1 +1,1 @@
-require("blocky")
+/nix/store/m9zgdf5pdm876zikx2k9ida50q6jw8sp-home-manager-files/.config/nvim/init.lua
